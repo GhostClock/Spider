@@ -68,6 +68,11 @@ ROBOTSTXT_OBEY = True
 #    'Spider.pipelines.SpiderPipeline': 300,
 #}
 
+import os, sys
+BASE_DIR = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
+sys.path.insert(0, os.path.join(BASE_DIR, "Spider"))    # 把路径加入到Python path中
+
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

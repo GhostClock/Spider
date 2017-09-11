@@ -10,6 +10,10 @@
   csvfeed
   xmlfeed
   `
-##### 2.生成模板
-    scrapy genspider -t lagou www.lagou.com
-
+##### 2.用crawl模板生成默认代码
+    scrapy genspider -t crawl lagou www.lagou.com
+##### 3.创建main.py用于调试
+    from scrapy.cmdline import execute
+    import sys, os
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)))   # 设置工程目录
+    execute(["scrapy", "crawl", "lagou"])
