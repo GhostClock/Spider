@@ -46,7 +46,7 @@ DEFAULT_REQUEST_HEADERS = {
   'Host': 'www.lagou.com',
   'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
   'Referer': 'https://www.lagou.com/',
-  'Cookie': ""
+  'Cookie': ""  # 一定要设置Cookie，否则会回302重定向到登录页面
 }
 
 # Enable or disable spider middlewares
