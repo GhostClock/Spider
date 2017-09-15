@@ -46,7 +46,7 @@ DEFAULT_REQUEST_HEADERS = {
   'Host': 'www.lagou.com',
   'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
   'Referer': 'https://www.lagou.com/',
-  'Cookie': "user_trace_token=20170910195047-4916b413-961e-11e7-8dfd-525400f775ce; LGUID=20170910195047-4916b671-961e-11e7-8dfd-525400f775ce; TG-TRACK-CODE=index_hotjob; X_HTTP_TOKEN=e36e4321d3a1b43f5c552ede6ab0a7cf; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1505055149; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1505406022; JSESSIONID=ABAAABAAAFCAAEG49D7D825F902299D603EA696BC9AC967; _putrc=67B31373EFD0463B; login=true; unick=%E5%BC%A0%E5%BF%97%E8%BF%9C; showExpriedIndex=1; showExpriedCompanyHome=1; showExpriedMyPublish=1; hasDeliver=56; SEARCH_ID=22778d5724ac4ba88f6c9b4a253199c2; index_location_city=%E6%B7%B1%E5%9C%B3; _ga=GA1.2.512492824.1505044247; LGSID=20170915235604-60f4d238-9a2e-11e7-9196-5254005c3644; LGRID=20170916000834-202e46ee-9a30-11e7-9196-5254005c3644"
+  'Cookie': ""
 }
 
 # Enable or disable spider middlewares
