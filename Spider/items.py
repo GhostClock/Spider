@@ -6,6 +6,8 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy.loader import ItemLoader
+from scrapy.loader.processors import TakeFirst, MapCompose, Join
 
 
 class SpiderItem(scrapy.Item):
@@ -14,7 +16,11 @@ class SpiderItem(scrapy.Item):
     pass
 
 
-class LagouJob(scrapy.Item):
+class LagouJobItemLoader(ItemLoader):
+    default_output_processor = TakeFirst()
+
+
+class LagouJobItem(scrapy.Item):
     #   拉勾网职位信息
     title = scrapy.Field()
 
@@ -28,9 +34,7 @@ class LagouJob(scrapy.Item):
 
     job_city = scrapy.Field()
 
-    work_years_min = scrapy.Field()
-
-    work_years_max = scrapy.Field()
+    work_years = scrapy.Field()
 
     degree_need = scrapy.Field()
 
@@ -52,4 +56,4 @@ class LagouJob(scrapy.Item):
 
     crawl_time = scrapy.Field()
 
-    crawl_update_time = scrapy.Field()
+    # crawl_update_time = scrapy.Field()
