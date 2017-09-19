@@ -97,3 +97,14 @@ sys.path.insert(0, os.path.join(BASE_DIR, "Spider"))    # 把路径加入到Pyth
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+#  配置Mysql
+MYSQL_HOST = '192.168.0.100'
+MYSQL_JOBBOLEDBANAME = 'article_spider'
+MYSQL_ZOLDBNAME = 'mobile_zol_article'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'admin123'
+
+SQL_DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
+SQL_DATE_FORMAT = "%Y-%m-%d"
