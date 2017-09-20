@@ -47,7 +47,7 @@ class LagouJobItem(scrapy.Item):
 
     url = scrapy.Field()
 
-    uil_object_id = scrapy.Field()
+    url_object_id = scrapy.Field()
 
     salary_min = scrapy.Field()
 
@@ -94,7 +94,7 @@ class LagouJobItem(scrapy.Item):
     def get_insert_sql(self):
         insert_sql = """
             INSERT INTO lagou_job(
-                title, url, uil_object_id, salary_min, 
+                title, url, url_object_id, salary_min, 
                 salary_max, job_city, work_years, 
                 degree_need, job_type, pulish_time, 
                 tags, job_advantage, job_desc, 
@@ -113,7 +113,7 @@ class LagouJobItem(scrapy.Item):
         """
 
         params = (
-            self['title'], self['url'], self['uil_object_id'],
+            self['title'], self['url'], self['url_object_id'],
             self['salary_min'], self['salary_max'], self['job_city'],
             self['work_years'], self['degree_need'], self['job_type'],
             self['pulish_time'], self['tags'], self['job_advantage'],
