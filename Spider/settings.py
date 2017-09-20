@@ -46,7 +46,7 @@ DEFAULT_REQUEST_HEADERS = {
   'Host': 'www.lagou.com',
   'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
   'Referer': 'https://www.lagou.com/',
-  'Cookie': ""  # 一定要设置Cookie，否则会回302重定向到登录页面
+  'Cookie': ""
 }
 
 # Enable or disable spider middlewares
@@ -69,9 +69,10 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Spider.pipelines.SpiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   # 'Spider.pipelines.SpiderPipeline': 300,
+   'Spider.pipelines.MysqlTwistedPiplines': 1,
+}
 
 BASE_DIR = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, os.path.join(BASE_DIR, "Spider"))    # 把路径加入到Python path中
@@ -101,8 +102,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, "Spider"))    # 把路径加入到Pyth
 
 #  配置Mysql
 MYSQL_HOST = '192.168.0.100'
-MYSQL_JOBBOLEDBANAME = 'article_spider'
-MYSQL_ZOLDBNAME = 'mobile_zol_article'
+MYSQL_DB_NAME = 'article_spider'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = 'admin123'
 
