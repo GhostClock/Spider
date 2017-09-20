@@ -41,12 +41,16 @@ class LagouSpider(CrawlSpider):
 
         item_loader.add_value("url", response.url)
 
-        item_loader.add_value("uil_object_id", get_md5_Value(response.url))
+        item_loader.add_value("url_object_id", get_md5_Value(response.url))
 
         salary = response.css(".job_request .salary::text").extract()
         salary = re.findall("(\d+)k-(\d+)k", salary[0])
-        salary_min = salary[0][0]
-        salary_max = salary[0][1]
+        if salary:
+            salary_min = salary[0][0]
+            salary_max = salary[0][1]
+        else:
+            salary_min = 0
+            salary_max = 0
 
         item_loader.add_value("salary_min", salary_min)
 
