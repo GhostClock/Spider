@@ -33,21 +33,22 @@ ROBOTSTXT_OBEY = False  #  不让遵循robots协议
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = False
-COOKIES_DEBUG = False
+COOKIES_ENABLED = True
+COOKIES_DEBUG = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-DEFAULT_REQUEST_HEADERS = {
-  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'Accept-Language': 'en',
-  'Host': 'www.lagou.com',
-  'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
-  'Referer': 'https://www.lagou.com/',
-  'Cookie': ""
-}
+# 爬取知乎的时候需要注释掉
+# DEFAULT_REQUEST_HEADERS = {
+#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#   'Accept-Language': 'en',
+#   'Host': 'www.lagou.com',
+#   'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+#   'Referer': 'https://www.lagou.com/',
+#   'Cookie': "user_trace_token=20170912232441-b7f2ab35-aeda-475f-9e42-4b8c52d0baca; _ga=GA1.2.843775601.1505229885; LGUID=20170912232444-81657a51-97ce-11e7-916e-5254005c3644; showExpriedIndex=1; showExpriedCompanyHome=1; showExpriedMyPublish=1; hasDeliver=56; index_location_city=%E5%85%A8%E5%9B%BD; _gat=1; LGSID=20170920232745-404b7b79-9e18-11e7-91f9-5254005c3644; PRE_UTM=; PRE_HOST=; PRE_SITE=; PRE_LAND=https%3A%2F%2Fwww.lagou.com%2F; _putrc=67B31373EFD0463B; JSESSIONID=ABAAABAAAGFABEF4147148AD71CDE4CCCEC91A74F7349F9; login=true; unick=%E5%BC%A0%E5%BF%97%E8%BF%9C; LGRID=20170920232931-7f650602-9e18-11e7-91f9-5254005c3644"
+# }
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
