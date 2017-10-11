@@ -58,9 +58,12 @@ COOKIES_DEBUG = True
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'Spider.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   'Spider.middlewares.RandomUserAgentMiddlware': 543,
+   'Spider.downloadermiddlewares.UserAgentMiddleware': None,   #  取消掉系统的UserAgent
+}
+
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0'
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -109,3 +112,7 @@ MYSQL_PASSWORD = 'admin123'
 
 SQL_DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 SQL_DATE_FORMAT = "%Y-%m-%d"
+
+#  随机更换User-Agent
+user_agent_list = []
+RANDOM_UA_TYPE = "random"
