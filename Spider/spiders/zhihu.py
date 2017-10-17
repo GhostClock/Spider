@@ -3,12 +3,10 @@ import scrapy
 import re
 import time
 import json
-import datetime
-
+import datetime, random
 from scrapy.http import FormRequest, Request
 from Spider.utils.zheye import zheye
 from scrapy.loader import ItemLoader
-
 from Spider.items import ZhihuAnswerItem, ZhihuQuestionItem
 
 try:
@@ -36,11 +34,18 @@ class ZhihuSpider(scrapy.Spider):
                        "A%5D.url%3Bdata%5B%2A%5D.author.follower_count%2" \
                        "Cbadge%5B%3F%28type%3Dbest_answerer%29%5D.topics&" \
                        "limit={1}&offset={2}&sort_by=default"
+
     user_agent_FireFox = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0'
     headers = {
         "Host": "www.zhihu.com",
         "Referer": "https://www.zhihu.com/",
         "User-Agent": user_agent_FireFox
+    }
+
+    #   覆盖掉setting里面值
+    custom_settings = {
+        "DOWNLOAD_DELAY": 10,
+        "COOKIES_ENABLED": True
     }
 
     # 1.
