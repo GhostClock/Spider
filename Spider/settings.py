@@ -60,6 +60,7 @@ COOKIES_DEBUG = True
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    'Spider.middlewares.RandomUserAgentMiddlware': 543,
+   'Spider.middlewares.RandomProxyMiddlewares': 544,
    'Spider.downloadermiddlewares.UserAgentMiddleware': None,   #  取消掉系统的UserAgent
 }
 
