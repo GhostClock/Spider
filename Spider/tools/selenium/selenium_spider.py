@@ -13,4 +13,3 @@ account = browser.find_element_by_css_selector('.view.view-signin input[name="ac
 browser.find_element_by_css_selector('.view-signin input[name="password"]').send_keys('youPassword')
 browser.find_element_by_css_selector('view-signin button.sign-button')
 browser.quit()
-pass
